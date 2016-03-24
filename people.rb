@@ -3,6 +3,11 @@ class Person
   def intialize(name)
     @name = name
   end
+
+#STEP 5
+  def greeting
+    "Hi, my name is #{name}."
+  end
 end
 # STEP 1
 class Student
