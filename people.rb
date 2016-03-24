@@ -29,3 +29,19 @@ end
 # STEP 6
 chris = Instructor.new("Chris")
 chris.greeting
+
+# STEP 7
+cristina = Student.new("Cristina")
+cristina.greeting
+
+# STEP 8
+chris.teach
+cristina.learn
+cristina.teach
+# *** cristina.teach doesn't work, because only
+# Instructors can teach. Cristina is a Student,
+# therefore she can only learn, an not teach.
+
+# If I wanted to actually print my "callings",
+# I'd have to simply add the keyword puts in
+# fron of it. (ex : puts chris.teach)
