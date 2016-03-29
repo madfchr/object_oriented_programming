@@ -1,9 +1,10 @@
 class Sales_taxes
   attr_accessor :item, :price
 
-  def initialize(item, price)
+  def initialize(item, price, quantity)
     @item = item
     @price = price
+    @quantity = quantity
   end
 
 
@@ -35,22 +36,33 @@ class Sales_taxes
 end
 
   # INPUTS
+  list_hash = {}
+  item = ""
+  price = ""
+
   puts "Would you like to add an item to the list?"
   answer = gets.chomp.downcase
-  while answer != "no"
+  while answer != "no" do
     puts "Enter item:"
     @item = gets.chomp
     puts "Enter price:"
     @price = gets.chomp
+    puts "Enter quantity:"
+    @quantity = gets.chomp
     puts "Would you like to add an item to the list?"
     answer = gets.chomp.downcase
+    list_hash[@quantity] = @item, @price
   end
-    puts "Okay, all done. Here's your receipt."
+
+  puts "Okay, all done. Here's your receipt:"
+  list_hash.each do |key, value, value2|
+    puts "#{value2} #{key}: #{value}"
+  end
 
     # new_list = Hash.new(item, price)
-    new_list = Sales_taxes.new(@item, @price)
-    new_list.hash
-    puts new_list
-
+    # new_list = Sales_taxes.new(@item, @price)
+    # new_list.hash
+    # puts new_list
+    #
 
     #{item.to_s}, #{price.to_i.round(3)}
