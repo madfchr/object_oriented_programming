@@ -74,3 +74,23 @@ array_instructions = instructions.split(//)
 rover_1 = Rover.new(x_initial.to_i, y_initial.to_i, direction)
 rover_1.read_instructions(array_instructions)
 rover_1.output
+
+class Grid
+
+  def initialize
+    @x_size = 10
+    @y_size = 10
+    @rovers = []
+  end
+
+  def add_rover(rover.object)
+    @rovers << rover.object
+  end
+end
+
+  r1 = Rover.new
+  r2 = Rover.new
+
+  g = Grid.new
+  g.add_rover(r1)
+  g.add_rover(r2)
